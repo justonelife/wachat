@@ -4,11 +4,15 @@
   "description": "chat app make with socket.io and reactjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx babel --watch src --out-file app_compiled.js --presets react-app/prod"
   },
   "keywords": [
     "chat"
   ],
   "author": "hys",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2"
+  }
 }
