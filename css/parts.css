@@ -1,0 +1,38 @@
+.avatar {
+	border-radius: 50%;
+	background: #eee;
+	position: relative;
+}
+.avatar--default {
+	background-image: url(../resources/neptune.png);
+	background-size: cover;
+}
+.avatar-default {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: #fff;
+}
+
+/*------*/
+
+.contact-box {
+	height: 60px;
+	width: 100%;
+	border: 1px solid #fff;
+	padding: 10px;
+}
+.contact-box__addBtn {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	font-size: 20px;
+	color: #fff;
+	background: transparent;
+	transition: background .2s ease;
+}
+.contact-box__addBtn:hover {
+	background: #74b9ff;
+}
