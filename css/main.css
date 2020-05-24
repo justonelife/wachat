@@ -4,6 +4,13 @@
 	border: 0;
 	box-sizing: border-box;
 }
+body {
+	font-family: 'Montserrat', sans-serif;
+}
 button {
 	cursor: pointer;
+	background: transparent;
+}
+button:focus {
+	outline: none;
 }

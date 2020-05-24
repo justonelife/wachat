@@ -1,8 +1,34 @@
+.project-chat {
+	background: orange;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+
+/*avatar*/
 .avatar {
 	border-radius: 50%;
 	background: #eee;
 	position: relative;
+	display: inline-block;
 }
+.avatar__status {
+    display: block;
+    position: absolute;
+    height: 30%;
+    width: 30%;
+    background: #1bff7c;
+    border-radius: 50%;
+    bottom: 0;
+    left: 0;
+}
+.avatar__status--offline {
+	display: none;
+}
+.avatar__status--online {
+	display: block;
+}
+
 .avatar--default {
 	background-image: url(../resources/neptune.png);
 	background-size: cover;
@@ -12,7 +38,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 40px;
+    font-size: 100%;
     color: #fff;
 }
 
@@ -24,15 +50,104 @@
 	border: 1px solid #fff;
 	padding: 10px;
 }
-.contact-box__addBtn {
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	font-size: 20px;
+.contact-box__msg {
 	color: #fff;
-	background: transparent;
-	transition: background .2s ease;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    width: 75%; /*need optimize*/
+    float: right;
+    font-size: 15px;
 }
-.contact-box__addBtn:hover {
-	background: #74b9ff;
+
+.contacts {
+	width: 100%;
+	height: 80vh;
+	background: orange; /*need optimize*/
+	overflow: scroll;
+}
+/*hide scroll bar*/
+::-webkit-scrollbar {
+	width: 0px;
+	background: transparent;
+}
+
+/*buttons*/
+.btn {
+	width: 40px;
+    height: 40px;
+    color: #9b59b6; /*optimize base on user's choose*/
+    line-height: 40px;
+    font-size: 20px;
+}
+.btn--circle {
+	border-radius: 50%;
+}
+.trioBtn {
+    height: 40px;
+    width: 150px;
+    display: inline-block;
+    float: right;
+}
+.trioBtn button {
+	margin-left: 10px;
+}
+
+/*sidebar*/
+.sidebar {
+	background: #81ECEC;
+	height: 100%;
+	width: 30%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.sidebar__head {
+	width: fit-content;/*check over browser*/
+	margin: 10px auto;
+}
+
+/*room chat*/
+.room {
+	background: #fff;
+	height: 100%;
+	width: calc(100% - 30%); /*30% sidebar, need optimize add var()*/
+	position: absolute;
+	left: 30%;
+}
+.room__head {
+	width: 100%;
+    height: 60px;
+    padding: 10px;
+    border: 1px solid #ededed;
+    box-shadow: 0px 1px 2px rgba(0, 0 , 0, .2)
+}
+.chatzone {
+	background: red;
+	width: 100%;
+	height: calc(100% - 60px - 40px);/*60px head, 40px bottom chat input (optimize with var())*/
+}
+.chatline {
+	height: fit-content;/*optimize*/
+	width: 100%;
+	background: red;
+}
+.chatbox {
+	height: inherit;
+    width: 50%;
+    padding: 0px 20px;
+}
+.chatbubble {
+    height: inherit;
+    width: 90%;
+    background: #f1f0f0;
+    float: right;
+    margin-top: 23px;
+    margin-right: 14px;
+}
+.chattype1 {
+	float: left;
+}
+.chattype2 {
+	float: right;
 }
