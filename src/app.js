@@ -125,10 +125,37 @@ class RoomHead extends React.Component {
 
 class ChatZone extends React.Component {
 	render() {
+		var messages = [
+			{
+				type: 1,
+				content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis, sapien quis maximus ultricies, libero leo pellentesque mi, et rutrum eros massa id tortor.'
+			},
+			{
+				type: 2,
+				content: 'Aenean sollicitudin lorem at nulla consequat, eget porta arcu egestas.'
+			},
+			{
+				type: 1,
+				content: 'Mauris quis condimentum odio.'
+			},
+			{
+				type: 1,
+				content: 'Sed molestie ut ex id pharetra. Proin eu tincidunt sapien, a ultrices est. Praesent mattis ultricies dui tempus fringilla. Proin efficitur tincidunt tellus egestas consectetur.'
+			},
+			{
+				type: 2,
+				content: 'Curabitur condimentum felis quis eros imperdiet rutrum. Nullam accumsan vulputate tortor, sed fringilla ligula tempus at.'
+			}
+		];
 
+
+		var chatlines = [];
+		messages.forEach((val, id) => chatlines.push(<ChatLine type={val.type} 
+															   content={val.content} 
+															   key={id} />));
 		return (
 			<div className='chatzone'>
-				<ChatLine />
+				{chatlines}
 			</div>
 		);
 	}
@@ -136,9 +163,8 @@ class ChatZone extends React.Component {
 
 class ChatLine extends React.Component {
 	render() {
-		var type = 1; {/*1: their chat, 2 your chat*/}
-		var content = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis, sapien quis maximus ultricies, libero leo pellentesque mi, et rutrum eros massa id tortor.';
-		
+		var type = this.props.type;
+		var content = this.props.content;
 		return (
 			<div className='chatline'>
 				<ChatBox content={content} type={type} />

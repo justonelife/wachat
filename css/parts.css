@@ -123,14 +123,15 @@
     box-shadow: 0px 1px 2px rgba(0, 0 , 0, .2)
 }
 .chatzone {
-	background: red;
 	width: 100%;
 	height: calc(100% - 60px - 40px);/*60px head, 40px bottom chat input (optimize with var())*/
+	overflow: scroll;
 }
 .chatline {
-	height: fit-content;/*optimize*/
+	height: auto;
 	width: 100%;
-	background: red;
+	display: inline-block;
+	margin-top: 50px;
 }
 .chatbox {
 	height: inherit;
@@ -138,12 +139,15 @@
     padding: 0px 20px;
 }
 .chatbubble {
-    height: inherit;
+	height: inherit;
     width: 90%;
     background: #f1f0f0;
     float: right;
     margin-top: 23px;
     margin-right: 14px;
+    padding: 15px;
+    line-height: 24px;
+    border-radius: 20px;
 }
 .chattype1 {
 	float: left;
