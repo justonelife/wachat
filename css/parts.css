@@ -66,11 +66,6 @@
 	background: orange; /*need optimize*/
 	overflow: scroll;
 }
-/*hide scroll bar*/
-::-webkit-scrollbar {
-	width: 0px;
-	background: transparent;
-}
 
 /*buttons*/
 .btn {
