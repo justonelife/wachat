@@ -21,12 +21,10 @@ class Avatar extends React.Component {
 
 class ContactBox extends React.Component {
 	render() {
-		var bg = this.props.theme;
 		var latestMessages = this.props.latestMessages;
 		var status = this.props.status;
 		return (
-			<div className='contact-box' 
-				 style={{backgroundColor: bg}}>
+			<div className='contact-box'>
 
 				<Avatar size='40' status={status} />
 				<p className='contact-box__msg'>{latestMessages}</p>
@@ -40,8 +38,7 @@ class Contacts extends React.Component {
 		var list = this.props.list;
 		var contacts = [];
 		list.forEach((val) => {
-			contacts.push(<ContactBox theme='#5ED2D2' 
-									  latestMessages={val.latestMessages}
+			contacts.push(<ContactBox latestMessages={val.latestMessages}
 									  key={val.id}
 									  status={val.status} />);
 		});

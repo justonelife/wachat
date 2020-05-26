@@ -49,13 +49,11 @@ var ContactBox = function (_React$Component2) {
 	_createClass(ContactBox, [{
 		key: 'render',
 		value: function render() {
-			var bg = this.props.theme;
 			var latestMessages = this.props.latestMessages;
 			var status = this.props.status;
 			return React.createElement(
 				'div',
-				{ className: 'contact-box',
-					style: { backgroundColor: bg } },
+				{ className: 'contact-box' },
 				React.createElement(Avatar, { size: '40', status: status }),
 				React.createElement(
 					'p',
@@ -84,8 +82,7 @@ var Contacts = function (_React$Component3) {
 			var list = this.props.list;
 			var contacts = [];
 			list.forEach(function (val) {
-				contacts.push(React.createElement(ContactBox, { theme: '#5ED2D2',
-					latestMessages: val.latestMessages,
+				contacts.push(React.createElement(ContactBox, { latestMessages: val.latestMessages,
 					key: val.id,
 					status: val.status }));
 			});

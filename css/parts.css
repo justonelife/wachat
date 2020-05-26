@@ -44,13 +44,12 @@
 /*------*/
 
 .contact-box {
-	height: 60px;
+	height: 80px;
 	width: 100%;
-	border: 1px solid #fff;
-	padding: 10px;
+	padding: 20px;/*optimize with inline avater size*/
 }
 .contact-box__msg {
-	color: #fff;
+	color: #7f8c8d;
     display: inline-block;
     height: 40px;
     line-height: 40px;
@@ -62,7 +61,7 @@
 .contacts {
 	width: 100%;
 	height: calc(100% - 120px); /*optimize with avatar size*/
-	background: orange;
+	/*background: orange;*/
 	overflow: scroll;
 }
 
@@ -89,17 +88,20 @@
 
 /*sidebar*/
 .sidebar {
-	background: #81ECEC;
+	/*background: #81ECEC;*/
 	height: 100%;
 	width: 30%;
 	position: absolute;
 	left: 0;
 	top: 0;
+	border: 2px solid #ededed;
+
 }
 .sidebar__head {
 	width: fit-content;/*check over browser*/
 	margin: 10px auto;
 	margin-bottom: 40px;
+
 }
 
 /*room chat*/
