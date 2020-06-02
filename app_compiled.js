@@ -211,7 +211,8 @@ var Room = function (_React$Component8) {
 				'div',
 				{ className: 'room' },
 				React.createElement(RoomHead, null),
-				React.createElement(ChatZone, null)
+				React.createElement(ChatZone, null),
+				React.createElement(InputZone, null)
 			);
 		}
 	}]);
@@ -379,6 +380,42 @@ var ChatBubble = function (_React$Component13) {
 	return ChatBubble;
 }(React.Component);
 
+var InputZone = function (_React$Component14) {
+	_inherits(InputZone, _React$Component14);
+
+	function InputZone() {
+		_classCallCheck(this, InputZone);
+
+		return _possibleConstructorReturn(this, (InputZone.__proto__ || Object.getPrototypeOf(InputZone)).apply(this, arguments));
+	}
+
+	_createClass(InputZone, [{
+		key: 'render',
+		value: function render() {
+			return React.createElement(
+				'div',
+				{ className: 'inputzone' },
+				React.createElement(
+					'form',
+					null,
+					React.createElement(
+						'div',
+						{ 'class': 'inputzone__input' },
+						React.createElement('input', { type: 'text' })
+					),
+					React.createElement(
+						'button',
+						{ className: 'inputzone__sendbtn' },
+						React.createElement('i', { 'class': 'fas fa-paper-plane' })
+					)
+				)
+			);
+		}
+	}]);
+
+	return InputZone;
+}(React.Component);
+
 var THEME = 'light';
 
 var CONTACTS = [{
@@ -439,8 +476,8 @@ var CONTACTS = [{
 	status: 'offline'
 }];
 
-var App = function (_React$Component14) {
-	_inherits(App, _React$Component14);
+var App = function (_React$Component15) {
+	_inherits(App, _React$Component15);
 
 	function App() {
 		_classCallCheck(this, App);

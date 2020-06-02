@@ -100,6 +100,7 @@ class Room extends React.Component {
 			<div className='room'>
 				<RoomHead />
 				<ChatZone />
+				<InputZone />
 			</div>
 		);
 	}
@@ -204,6 +205,24 @@ class ChatBubble extends React.Component {
 		);
 	}
 }
+
+class InputZone extends React.Component {
+	render() {
+		return (
+			<div className='inputzone'>
+				<form>
+					<div class='inputzone__input'>
+						<input type='text'></input>
+					</div>
+					<button className='inputzone__sendbtn'>
+						<i class="fas fa-paper-plane"></i>
+					</button>
+				</form>
+			</div>
+		);
+	}
+}
+
 
 const THEME = 'light';
 
