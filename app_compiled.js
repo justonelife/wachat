@@ -400,13 +400,13 @@ var InputZone = function (_React$Component14) {
 					null,
 					React.createElement(
 						'div',
-						{ 'class': 'inputzone__input' },
+						{ className: 'inputzone__input' },
 						React.createElement('input', { type: 'text' })
 					),
 					React.createElement(
 						'button',
 						{ className: 'inputzone__sendbtn' },
-						React.createElement('i', { 'class': 'fas fa-paper-plane' })
+						React.createElement('i', { className: 'fas fa-paper-plane' })
 					)
 				)
 			);

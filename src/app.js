@@ -211,11 +211,11 @@ class InputZone extends React.Component {
 		return (
 			<div className='inputzone'>
 				<form>
-					<div class='inputzone__input'>
+					<div className='inputzone__input'>
 						<input type='text'></input>
 					</div>
 					<button className='inputzone__sendbtn'>
-						<i class="fas fa-paper-plane"></i>
+						<i className="fas fa-paper-plane"></i>
 					</button>
 				</form>
 			</div>

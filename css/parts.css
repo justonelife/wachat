@@ -101,7 +101,19 @@
 	width: fit-content;/*check over browser*/
 	margin: 10px auto;
 	margin-bottom: 40px;
+	position: relative;
 
+}
+.sidebar__head::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 30vw;
+    background: #bdc3c7;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /*room chat*/
