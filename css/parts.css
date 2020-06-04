@@ -117,12 +117,17 @@
 }
 
 /*room chat*/
+.room-wrapper {
+	position: absolute;
+	height: 100%;
+	width: calc(100% - 30%); /*30% sidebar, need optimize add var()*/
+	left: 30%;
+}
 .room {
 	background: #fff;
 	height: 100%;
-	width: calc(100% - 30%); /*30% sidebar, need optimize add var()*/
-	position: absolute;
-	left: 30%;
+	width: 100%;
+	position: relative;
 }
 .room__head {
 	width: 100%;
@@ -165,26 +170,39 @@
 }
 
 .inputzone {
-	height: 60px;
+	min-height: 60px;
+	height: auto;
+	max-height: 300px;
 	width: 100%;
 	padding: 10px 20px;
 	border-top: 1px solid #bdc3c7;
+	position: absolute;
+	bottom: 0;
+	background: #fff;
 }
 .inputzone__input {
-	height: 40px;
+	min-height: 40px;
+	height: auto;
+	max-height: 200px;
 	width: 95%;
 	background: #fff;
 	display: inline-block;
 	border-radius: 25px;
-	padding: 0 25px;
+	padding: 10px 25px;
 	border: 1px solid #bdc3c7;
 }
-.inputzone__input > input {
-	height: 100%;
+.inputzone__input__in {
+	min-height: 20px;
+	height: auto;
+	max-height: 150px;
+	overflow-y: scroll;
 	width: 100%;
 	background: transparent;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 15px;
+}
+.inputzone__input__in:focus {
+	outline: none;
 }
 .inputzone__sendbtn {
 	background: transparent;

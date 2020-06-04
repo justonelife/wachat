@@ -209,10 +209,14 @@ var Room = function (_React$Component8) {
 		value: function render() {
 			return React.createElement(
 				'div',
-				{ className: 'room' },
-				React.createElement(RoomHead, null),
-				React.createElement(ChatZone, null),
-				React.createElement(InputZone, null)
+				{ className: 'room-wrapper' },
+				React.createElement(
+					'div',
+					{ className: 'room' },
+					React.createElement(RoomHead, null),
+					React.createElement(ChatZone, null),
+					React.createElement(InputZone, null)
+				)
 			);
 		}
 	}]);
@@ -401,7 +405,8 @@ var InputZone = function (_React$Component14) {
 					React.createElement(
 						'div',
 						{ className: 'inputzone__input' },
-						React.createElement('input', { type: 'text' })
+						React.createElement('div', { className: 'inputzone__input__in',
+							contentEditable: 'true' })
 					),
 					React.createElement(
 						'button',

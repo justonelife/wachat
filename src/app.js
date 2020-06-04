@@ -97,10 +97,12 @@ class SideBar extends React.Component {
 class Room extends React.Component {
 	render() {
 		return (
-			<div className='room'>
-				<RoomHead />
-				<ChatZone />
-				<InputZone />
+			<div className='room-wrapper'>
+				<div className='room'>
+					<RoomHead />
+					<ChatZone />
+					<InputZone />
+				</div>
 			</div>
 		);
 	}
@@ -212,7 +214,9 @@ class InputZone extends React.Component {
 			<div className='inputzone'>
 				<form>
 					<div className='inputzone__input'>
-						<input type='text'></input>
+						<div className='inputzone__input__in' 
+							 contentEditable='true'>
+						</div>
 					</div>
 					<button className='inputzone__sendbtn'>
 						<i className="fas fa-paper-plane"></i>
