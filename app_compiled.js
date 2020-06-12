@@ -401,7 +401,7 @@ var InputZone = function (_React$Component14) {
 				{ className: 'inputzone' },
 				React.createElement(
 					'form',
-					null,
+					{ className: 'inputzone-ctn' },
 					React.createElement(
 						'div',
 						{ className: 'inputzone__input' },

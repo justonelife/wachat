@@ -212,7 +212,7 @@ class InputZone extends React.Component {
 	render() {
 		return (
 			<div className='inputzone'>
-				<form>
+				<form className='inputzone-ctn'>
 					<div className='inputzone__input'>
 						<div className='inputzone__input__in' 
 							 contentEditable='true'>
